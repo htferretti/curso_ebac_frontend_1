@@ -1,55 +1,141 @@
 * {
-    box-sizing: content-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
 }
 
-section {
-    display: flex;
-    justify-content: center;
+body {
+    background: #fff;
 }
 
 .container {
-    max-width: 600px;
-    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-h1, h2 {
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight:bolder;
-}
-
-h1 {
+.container > div {
+    display: flex;
+    justify-content:space-around;
     margin-top: 100px;
-    font-size: 40px;
 }
 
-h2 {
+.container > div h1 {
     font-size: 30px;
+    color: gray;
+}
+
+.container > div button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    background: #f0f0f0;
+    font-weight: bolder;
+    color: gray;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.container > div button:hover {
+    background: gray;
+    color: #f0f0f0;
 }
 
 form {
-    margin-top: 20px;
+    margin-top: 16px;
+    display: none;
+    justify-content: space-around;
 }
 
-form input,  form button  {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
+form input, form button {
+    padding: 8px;
+}
+
+form input {
+    width: 212px;
+    background: #f0f0f0;
+    border: none;
+    color: gray;
+    transition: .1s;
+}
+
+form input:focus {
+    outline: gray solid 1px;
+}
+
+form button {
+    width: 98px;
+    border: none;
+    font-weight: bolder;
+    transition: .1s;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+#btn-submit {
+    background: green;
+}
+
+#btn-submit:hover {
+    background: #f0f0f0;
+    color: green;
+}
+
+#btn-cancel {
+    background: red;
+}
+
+#btn-cancel:hover {
+    background: #f0f0f0;
+    color: red;
+}
+
+ul {
+    margin-top: 16px;
+    list-style-type: none;
+}
+
+ul li {
+    padding: 8px;
+    color: gray;
+    transition: .1s;
+    cursor: pointer;
+    border: transparent solid 2px;
+}
+
+ul li:hover {
+    background: gray;
+    color: #f0f0f0;
+}
+
+.cinza1 {
+    background: #f0f0f0;
+}
+
+.cinza2 {
+    background: #e2e2e2;
+}
+
+.check {
+    text-decoration: line-through;
+    border: green dashed 2px;
+}
+
+#limpa-lista {
+    margin-top: 16px;
+    width: 200px;
     height: 40px;
     border: none;
-    border-radius: 5px;
-    background: whitesmoke;
-    padding: 5px;
-}
-
-form button  {
-    background: darkolivegreen;
-}
-
-.container p {
-    display: none;
+    background: #f0f0f0;
     font-weight: bolder;
-    text-align: center;
-    margin-top: 15px;
+    color: gray;
+    transition: .1s;
+    cursor: pointer;
+}
+
+#limpa-lista:hover {
+    background: gray;
+    color: #f0f0f0;
+    border: red solid 2px;
 }

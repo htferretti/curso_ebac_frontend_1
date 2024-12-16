@@ -6,21 +6,31 @@
 
     <title>HTML com JS</title>
     <link rel="stylesheet" href="./main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <section>
         <div class="container">
-            <h1>Exercício</h1>
-            <h2>JavaScript DOM</h2>
-            <form id="form-deposito">
-                <input id="campo-A" type="number" required placeholder="Campo A">
-                <input id="campo-B" type="number" required placeholder="Campo B">
-                <button id="btn-submit" type="submit">Submit</button>
+            <div>
+                <h1>Lista de tarefas</h1>
+                <button id="btn-add">Adicionar</button>
+            </div>
+            <form>
+                <input id="campo-A" type="text" required placeholder="Nome da tarefa">
+                <div>
+                    <button id="btn-submit" type="submit">Adicionar</button>
+                    <button id="btn-cancel" type="reset">Cancelar</button>
+                </div>
             </form>
-            <p id="message"></p>
+            <ul></ul>
+            <button id="limpa-lista">Limpar lista</button>
         </div>
     </section>
-
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

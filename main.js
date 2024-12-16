@@ -1,18 +1,44 @@
-const botaoSubmit = document.getElementById('btn-submit')
-const campoA = document.getElementById('campo-A')
-const campoB = document.getElementById('campo-B')
-const message = document.getElementById('message')
+const form = $('form')
 
-botaoSubmit.addEventListener('click', function(e){
-    e.preventDefault()
+tarefas = []
 
-    if(campoA.value < campoB.value) {
-        message.innerHTML = `Válido! ${campoB.value} é maior que ${campoA.value}`
-        message.style.display = 'block'
-        message.style.color = 'darkolivegreen'
+$('#btn-add').click(function() {
+    if(form.css('display') == 'none') {
+        form.slideDown()
+        form.css({'display': 'flex'})
     } else {
-        message.innerHTML = `Inválido! ${campoB.value} é menor que ${campoA.value}`
-        message.style.display = 'block'
-        message.style.color = 'red'
+        form.slideUp()
     }
+})
+
+$('#btn-cancel').click(function() {
+    form.slideUp()
+})
+
+$('form').submit(function(e) {
+    e.preventDefault()
+    const input = $('input:text')
+    tarefas.push(input.val())
+
+    if(tarefas.length % 2 == 1){
+        const novoItem = $('<li class="cinza1"></li>')
+        novoItem.text(input.val())
+        $(novoItem).appendTo('ul')
+
+    } else {
+        const novoItem = $('<li class="cinza2"></li>')
+        novoItem.text(input.val())
+        $(novoItem).appendTo('ul')
+
+    }
+    input.val('')
+})
+
+$('ul').on('click', 'li', function(e) {
+    const li = $(e.target)
+    li.toggleClass('check')
+});
+
+$('#limpa-lista').click(function() {
+    $('ul').empty()
 })
