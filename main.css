@@ -1,141 +1,64 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background: #fff;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 16px;
 }
 
 .container {
-    max-width: 640px;
+    max-width: 600px;
     margin: 0 auto;
-    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container > div {
-    display: flex;
-    justify-content:space-around;
-    margin-top: 100px;
+.form-campo {
+    margin-bottom: 20px;
 }
 
-.container > div h1 {
-    font-size: 30px;
-    color: gray;
+.form-campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.container > div button {
-    width: 200px;
-    height: 40px;
+.form-campo input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
     border: none;
-    background: #f0f0f0;
-    font-weight: bolder;
-    color: gray;
-    transition: .1s;
     cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
 }
 
-.container > div button:hover {
-    background: gray;
-    color: #f0f0f0;
-}
-
-form {
-    margin-top: 16px;
-    display: none;
-    justify-content: space-around;
-}
-
-form input, form button {
-    padding: 8px;
-}
-
-form input {
-    width: 212px;
-    background: #f0f0f0;
-    border: none;
-    color: gray;
-    transition: .1s;
-}
-
-form input:focus {
-    outline: gray solid 1px;
-}
-
-form button {
-    width: 98px;
-    border: none;
-    font-weight: bolder;
-    transition: .1s;
-    color: #f0f0f0;
-    cursor: pointer;
-}
-
-#btn-submit {
-    background: green;
-}
-
-#btn-submit:hover {
-    background: #f0f0f0;
-    color: green;
-}
-
-#btn-cancel {
-    background: red;
-}
-
-#btn-cancel:hover {
-    background: #f0f0f0;
-    color: red;
-}
-
-ul {
-    margin-top: 16px;
-    list-style-type: none;
-}
-
-ul li {
-    padding: 8px;
-    color: gray;
-    transition: .1s;
-    cursor: pointer;
-    border: transparent solid 2px;
-}
-
-ul li:hover {
-    background: gray;
-    color: #f0f0f0;
-}
-
-.cinza1 {
-    background: #f0f0f0;
-}
-
-.cinza2 {
-    background: #e2e2e2;
-}
-
-.check {
-    text-decoration: line-through;
-    border: green dashed 2px;
-}
-
-#limpa-lista {
-    margin-top: 16px;
-    width: 200px;
-    height: 40px;
-    border: none;
-    background: #f0f0f0;
-    font-weight: bolder;
-    color: gray;
-    transition: .1s;
-    cursor: pointer;
-}
-
-#limpa-lista:hover {
-    background: gray;
-    color: #f0f0f0;
-    border: red solid 2px;
+.error {
+    color: red
 }
